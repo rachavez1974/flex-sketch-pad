@@ -5,9 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="index.css">
-  <script type="text/javascript" src="index.js"></script>
+  <script type="text/javascript" defer src="index.js"></script>
 </head>
 <body>
-  <h1>Hello</h1>
+  <div>
+    <button id="reset" class="button button-gray">Reset</button>
+    <button id="new-grid" class="button button-gray">New Grid</button>
+  </div>
+
+  <div class="form-popup" id="dims-forms">
+    <form action="/action_page.php" class="form-container">
+      <h1>Please enter your grid dimensions.</h1>
+
+      <label  for="columns"><b>Columns</b></label>
+      <input id="columns" type="text" placeholder="Enter number of columns, max = 100" name="columns" required>
+
+      <label for="rows"><b>Rows</b></label>
+      <input id="rows" type="text" placeholder="Enter number of rows, max = 100" name="rows" required>
+
+      <button id="submit" type="submit" class="btn">Submit</button>
+      <button id="close" type="button" class="btn cancel">Close</button>
+    </form>
+  </div>
+
 </body>
 </html>
