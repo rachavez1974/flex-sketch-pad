@@ -1,9 +1,16 @@
+let brightnessIncrease = 0;
+
 function changeBackgroundColor(e){
+  brightnessIncrease += 50
   let rgb_first_value = Math.floor(Math.random() * 255);
   let rgb_second_value = Math.floor(Math.random() * 255);
   let rgb_third_value = Math.floor(Math.random() * 255);
+  e.target.style.filter = `brightness(${brightnessIncrease}%)`
 
   e.target.style.backgroundColor = `rgb(${rgb_first_value}, ${rgb_second_value}, ${rgb_third_value})`;
+
+
+  console.log(`${brightnessIncrease}%`)
 }
 
 function openGridDimensions(){
@@ -13,6 +20,8 @@ function openGridDimensions(){
 function clearGrid(){
   let grabContainers = document.querySelectorAll('.flex-container')
   grabContainers.forEach(container => container.remove())
+  brightnessIncrease = 0;
+
 }
 
 function resetGrid(){
